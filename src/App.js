@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Header from "./components/Header";
+import Section from "./components/Section";
+import data from "./assets/program.json";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header title="M6" />
+
+      <main>
+        {data.map((element) => {
+          // console.log(element);
+          return (
+            <Section
+              time={element.time}
+              title={element.title}
+              type={element.type}
+              duration={element.duration}
+              image={element.image}
+              isUnseen={element.isUnseen}
+              direct={element.direct}
+            />
+          );
+        })}
+      </main>
+    </>
   );
 }
 

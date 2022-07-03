@@ -1,38 +1,132 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: '';
+  background-color: white;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  height: 30%;
+  padding: 20px 0;
+  margin-bottom: 60px;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 45px;
+}
+
+.m6-logo {
+  width: 80px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo h1 {
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo img {
+  margin-right: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.program_content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 35px 0;
+  padding: 0 10px 30px 0px;
+  border-bottom: 2px #ccccccc3 solid;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px 0 0;
+}
+
+.left p {
+  font-weight: 600;
+}
+
+.left img {
+  border-radius: 2.5%;
+  padding-left: 35px;
+  object-fit: cover;
+}
+
+.rigth {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  padding-left: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.rigth p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.direct span {
+  font-weight: bold;
+  color: red;
+}
+
+.inedit span {
+  font-weight: bold;
+  color: red;
+}
+
+.little {
+  display: flex;
+  width: auto;
+}
+
+.little p {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+@media(max-width: 657px) {
+
+  .program_content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .rigth {
+    margin-top: 15px;
+    padding-left: 0;
+
   }
+
+  .left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px 0 0;
+  }
+
 }
